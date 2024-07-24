@@ -1,0 +1,40 @@
+Q1 
+This output will be like this because there is one method.
+
+"hey from massage1"
+
+Q2 
+The output will be:
+
+This output displays this way because there are two ways it will display. 
+This is because the annotations @Bean and @Qualifier do not specify the order in which the methods will execute. 
+They just add the methods to the Spring container.
+
+"hey from massage1"	OR	"hey from massage2"	
+"hey from massage2"		 "hey from massage1"
+	
+
+Q3
+The output wil be :
+My description of the output like Q2.
+a-"hey from massage1"		d-"hey from massage1"
+a-"hey from massage2"  OR	d-"hey from massage3"
+a-"hey from massage3"		d-"hey from massage2"
+
+Q4
+The output wil be :
+My description of the output will be like Q2, and the 'hey from main controller' will appear first or before the @Qualifier('1') because if the method starts first and saves the value in the container,
+ it will add the value to the one with @Qualifier('1') in the parameter position.
+a-"hey from massage1"		b-"hey from main controller"
+a-"hey from main controller" OR b-"hey from massage1"		
+a-""hey from massage2"		b-"hey from massage3"	
+a-"hey from massage3"		b-"hey from massage2"
+
+Q5
+The output wil be :
+My description of the output will be like Q4.
+a-"hey from massage1"			b-"hey from massage3"					
+a-"hey from massage3"			b-"hey from massage2"			
+a-"hey from massage2"		OR 	b-"hey from main controller"	
+a-"hey from main controller"		b-"hey from massage1"			
+		
